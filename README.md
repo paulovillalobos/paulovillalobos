@@ -79,8 +79,6 @@ While reading a public procedures catalogue, I found an SMTP credential being
 sent to the browser by a software platform that Portuguese municipalities use.
 I reported it to the vendor and the municipality, with CERT.PT in copy, and the
 vendor confirmed the same day that it was fixed for every affected client.
-CERT.PT, the national CSIRT at the Centro Nacional de Cibersegurança (CNCS),
-acknowledged the report.
 
 ---
 
