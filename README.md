@@ -1,13 +1,20 @@
 # Paulo Villalobos
 
-Software engineer. Backend systems, data pipelines, machine learning.
-Porto, Portugal · remote · [CV](https://github.com/paulovillalobos/paulovillalobos/blob/main/Paulo-Villalobos-CV.pdf) · [paulo@foaap.app](mailto:paulo@foaap.app)
+Founder of **[FOAAP Lda](https://tecnologia.foaap.app/)**, a software company in Porto, Portugal.
+Backend systems, data pipelines, machine learning. Contracts: [paulo@foaap.app](mailto:paulo@foaap.app)
 
-Most of my work has been private: I keep notes, designs and experiments locally
-in CherryTree, and started publishing on GitHub in 2026. The projects below are
-recent builds on problems I'd been working on privately, from EU research data
-and Portuguese public statistics to job systems and infrastructure. Every number
-below comes from code in the linked repository.
+**3rd place, "Mapping CORDIS projects to SDGs"**, European Data Portal, Publications Office of the
+European Union, Luxembourg, 4 November 2026, for [Nexus CORDIS](https://nexus.foaap.app/#/).
+
+### Merged upstream
+
+- **European Commission, EUDI Wallet reference issuer**: [eudi-srv-web-issuing-eudiw-py#195](https://github.com/eu-digital-identity-wallet/eudi-srv-web-issuing-eudiw-py/pull/195)
+- **Direção-Geral do Território, recartDGT QGIS plugin**: [recart-plugin#104](https://github.com/dgterritorio/recart-plugin/pull/104) (invalid-geometry check), [#105](https://github.com/dgterritorio/recart-plugin/pull/105) (per-version mapping files)
+- **Autenticação.gov (Cartão de Cidadão middleware), Qt 6 port**: [csoares/autenticacao.gov#1](https://github.com/csoares/autenticacao.gov/pull/1), Linux and Flatpak build on Qt 6, now part of [amagovpt/autenticacao.gov#258](https://github.com/amagovpt/autenticacao.gov/pull/258)
+- **Carris Metropolitana website**: [carrismetropolitana/website#342](https://github.com/carrismetropolitana/website/pull/342)
+- **mc-router**: [itzg/mc-router#637](https://github.com/itzg/mc-router/pull/637)
+
+Every number below comes from code in the linked repository.
 
 ---
 
