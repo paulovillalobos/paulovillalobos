@@ -85,4 +85,4 @@ vendor confirmed the same day that it was fixed for every affected client.
 Also: [foaap-engine-public](https://github.com/paulovillalobos/foaap-engine-public) ·
 [energy-baseline-public](https://github.com/paulovillalobos/energy-baseline-public) ·
 [bicis-sapiens-web](https://github.com/paulovillalobos/bicis-sapiens-web) ·
-live: [NEXUS](https://nexus.foaap.app/#/), [FOAAP](https://foaap.app/)
+live: [NEXUS](https://nexus.foaap.app/#/), [FOAAP](https://tecnologia.foaap.app/)
