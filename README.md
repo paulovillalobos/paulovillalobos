@@ -3,6 +3,16 @@
 Founder of **[FOAAP Lda](https://tecnologia.foaap.app/)**, a software company in Porto, Portugal.
 Backend systems, data pipelines, machine learning. Contracts: [paulo@foaap.app](mailto:paulo@foaap.app)
 
+### saneamento-engine — a Portuguese sovereign LLM that reads building applications and cannot invent a word
+
+**[github.com/paulovillalobos/saneamento-engine](https://github.com/paulovillalobos/saneamento-engine)** · live demo **[lei.foaap.app](https://lei.foaap.app)**
+
+The Portaria that lists what a building application must contain, decomposed into 642 hashed passages and 88 rules,
+and a Portuguese 9B model fine-tuned on it through twelve rounds under a grammar that only lets it answer with what is
+literally on the page. Code decides, the técnico signs. 66 planted errors found out of 66 on test sets frozen before
+training, zero false alarms; "cannot decide" is a scored success. EUPL-1.2, commercial licence on request.
+`Python` `vLLM` `LoRA` `Modal` `law as data`
+
 **3rd place, "Mapping CORDIS projects to SDGs"**, European Data Portal, Publications Office of the
 European Union, Luxembourg, 4 November 2026, for [Nexus CORDIS](https://nexus.foaap.app/#/).
 
@@ -57,15 +67,6 @@ that static checks had passed.
 `Kubernetes` `Terraform` `Prometheus` `Bash`
 
 ### Machine learning and AI
-
-**[saneamento-engine](https://github.com/paulovillalobos/saneamento-engine)**
-Portuguese urban-licensing engine. The Portaria that lists what a building
-application must contain, decomposed into 642 hashed passages and 88 rules, and
-a Portuguese sovereign 9B model fine-tuned on it through twelve rounds, under a
-grammar that only lets it answer with what is literally on the page. Code decides,
-the técnico signs. 66 planted errors found out of 66 on test sets frozen before
-training, zero false alarms; "cannot decide" is a scored success. Public demo:
-[lei.foaap.app](https://lei.foaap.app). `Python` `vLLM` `LoRA` `Modal` `EUPL-1.2`
 
 **[cordis-field-classifier](https://github.com/paulovillalobos/cordis-field-classifier)**
 Classifies 52,000 EU research projects into 37 fields. A fine-tuned transformer
