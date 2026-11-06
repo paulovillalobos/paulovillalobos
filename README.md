@@ -58,6 +58,15 @@ that static checks had passed.
 
 ### Machine learning and AI
 
+**[saneamento-engine](https://github.com/paulovillalobos/saneamento-engine)**
+Portuguese urban-licensing engine. The Portaria that lists what a building
+application must contain, decomposed into 642 hashed passages and 88 rules, and
+a Portuguese sovereign 9B model fine-tuned on it through twelve rounds, under a
+grammar that only lets it answer with what is literally on the page. Code decides,
+the técnico signs. 66 planted errors found out of 66 on test sets frozen before
+training, zero false alarms; "cannot decide" is a scored success. Public demo:
+[lei.foaap.app](https://lei.foaap.app). `Python` `vLLM` `LoRA` `Modal` `EUPL-1.2`
+
 **[cordis-field-classifier](https://github.com/paulovillalobos/cordis-field-classifier)**
 Classifies 52,000 EU research projects into 37 fields. A fine-tuned transformer
 reaches 0.709 micro-F1 and holds it on a later funding programme it never saw,
