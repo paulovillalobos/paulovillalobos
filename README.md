@@ -3,6 +3,17 @@
 Founder of **[FOAAP Lda](https://tecnologia.foaap.app/)**, a software company in Porto, Portugal.
 Backend systems, data pipelines, machine learning. Contracts: [paulo@foaap.app](mailto:paulo@foaap.app)
 
+### ccp-engine — does every Portuguese public contract follow the law?
+
+**[github.com/paulovillalobos/ccp-engine](https://github.com/paulovillalobos/ccp-engine)** · live **[contratos.foaap.app](https://contratos.foaap.app)**
+
+A deterministic engine that reads the Código dos Contratos Públicos as data (40,088 passages, every wording with the
+dates it was in force) and checks all 1,487,586 procedures on the BASE portal against it with 101 typed rules. Each
+verdict cites the article, the literal text in force on that date and the facts it used: 32,578 comply, 240 do not,
+the rest say why they cannot be decided. Models propose readings of the law, code decides, and no model runs at
+verdict time; a hash-chained governance log makes every result replayable. EUPL-1.2.
+`Python` `PostgreSQL` `Cloud Run` `React` `law as data`
+
 ### saneamento-engine — a Portuguese sovereign LLM that reads building applications and cannot invent a word
 
 **[github.com/paulovillalobos/saneamento-engine](https://github.com/paulovillalobos/saneamento-engine)** · live demo **[lei.foaap.app](https://lei.foaap.app)**
