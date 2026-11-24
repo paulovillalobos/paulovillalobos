@@ -1,7 +1,17 @@
 # Paulo Villalobos
 
-Founder of **[FOAAP Lda](https://tecnologia.foaap.app/)**, a software company in Porto, Portugal.
-Backend systems, data pipelines, machine learning. Contracts: [paulo@foaap.app](mailto:paulo@foaap.app)
+Founder of **[FOAAP](https://foaap.app)**. We build trust infrastructure for Europe: systems that make identity,
+credentials and decisions verifiable. Porto, Portugal · [paulo@foaap.app](mailto:paulo@foaap.app)
+
+### cunho: credentials in the European Digital Identity Wallet
+
+**[github.com/paulovillalobos/cunho](https://github.com/paulovillalobos/cunho)** · try it on your phone: **[demo.foaap.app](https://demo.foaap.app)**
+
+An open-source issuer for the EU Digital Identity Wallet: OpenID4VCI 1.0, SD-JWT VC, HAIP, and revocation in seconds
+through a Token Status List. It works with independent wallets (Lissi, Paradym) and issues straight from Moodle.
+Institutions keep their own name and their own key; FOAAP runs it and keeps it current with every change to the
+specifications. AGPL-3.0, with an Apache-2.0 edition.
+`OpenID4VCI` `SD-JWT VC` `eIDAS 2.0` `Moodle`
 
 ### ccp-engine — does every Portuguese public contract follow the law?
 
@@ -14,16 +24,6 @@ the rest say why they cannot be decided. Models propose readings of the law, cod
 verdict time; a hash-chained governance log makes every result replayable. EUPL-1.2.
 `Python` `PostgreSQL` `Cloud Run` `React` `law as data`
 
-### saneamento-engine — a Portuguese sovereign LLM that reads building applications and cannot invent a word
-
-**[github.com/paulovillalobos/saneamento-engine](https://github.com/paulovillalobos/saneamento-engine)** · live demo **[lei.foaap.app](https://lei.foaap.app)**
-
-The Portaria that lists what a building application must contain, decomposed into 642 hashed passages and 88 rules,
-and a Portuguese 9B model fine-tuned on it through twelve rounds under a grammar that only lets it answer with what is
-literally on the page. Code decides, the técnico signs. 66 planted errors found out of 66 on test sets frozen before
-training, zero false alarms; "cannot decide" is a scored success. EUPL-1.2, commercial licence on request.
-`Python` `vLLM` `LoRA` `Modal` `law as data`
-
 **3rd place, "Mapping CORDIS projects to SDGs"**, European Data Portal, Publications Office of the
 European Union, Luxembourg, 4 November 2026, for [Nexus CORDIS](https://nexus.foaap.app/#/).
 
@@ -35,71 +35,15 @@ European Union, Luxembourg, 4 November 2026, for [Nexus CORDIS](https://nexus.fo
 - **Carris Metropolitana website**: [carrismetropolitana/website#342](https://github.com/carrismetropolitana/website/pull/342)
 - **mc-router**: [itzg/mc-router#637](https://github.com/itzg/mc-router/pull/637)
 
-Every number below comes from code in the linked repository.
+### More engineering
 
----
-
-### Backend
-
-**[macro-vintages](https://github.com/paulovillalobos/macro-vintages)**
-Euro-area macro data from the ECB and Eurostat in PostgreSQL, keeping every
-value the system has ever held, so the API can answer what a series said at any
-past moment. Workers claim jobs with `SKIP LOCKED` and lease fencing; race tests
-run six processes against each other, and a mutation check removes each lock in
-turn to prove a test catches it. Async FastAPI with ETags, hashed API keys and
-rate limits. 120 tests, 0 inconsistent reads in 9,406 under load.
-`Python` `FastAPI` `PostgreSQL` `asyncpg`
-
-**[audio-jobs](https://github.com/paulovillalobos/audio-jobs)**
-Background-job system in Go on Postgres and Redis Streams: at-least-once
-delivery, retries, a dead-letter queue, lease fencing. In the chaos test 1,000
-of 1,000 jobs finish while workers are killed mid-job and Redis loses its data.
-Profiling took throughput from 162 to 532 jobs/s.
-`Go` `PostgreSQL` `Redis` `Docker`
-
-### Data
-
-**[pt-open-data-pipeline](https://github.com/paulovillalobos/pt-open-data-pipeline)**
-Portuguese card-spending statistics (INE) for 308 municipalities since 2020:
-immutable raw layer, DuckDB, dbt marts, incremental loads, Parquet. Its 82 data
-tests caught a published inconsistency: a region-month where INE reports 0 online
-transactions while its 13 municipalities add up to 2,553.
-`Python` `SQL` `dbt` `DuckDB`
-
-### Infrastructure
-
-**[platform-infra](https://github.com/paulovillalobos/platform-infra)**
-Runs audio-jobs on Kubernetes with Prometheus alerts on SLOs and six scripted
-failure drills (worker kills, a Postgres crash, a Redis wipe, a bad deploy rolled
-back automatically), 0 jobs lost. The Terraform for private GKE, Cloud SQL and
-Workload Identity was applied to a real GCP project, checked (11/11, each with a
-negative test), drilled under load and destroyed; the real run found six bugs
-that static checks had passed.
-`Kubernetes` `Terraform` `Prometheus` `Bash`
-
-### Machine learning and AI
-
-**[cordis-field-classifier](https://github.com/paulovillalobos/cordis-field-classifier)**
-Classifies 52,000 EU research projects into 37 fields. A fine-tuned transformer
-reaches 0.709 micro-F1 and holds it on a later funding programme it never saw,
-where TF-IDF drops to 0.637. Bootstrap intervals on every number. The official
-export makes pandas silently drop 285 rows; the reader here recovers them.
-`PyTorch` `Transformers` `scikit-learn` `FastAPI`
-
-**[incident-agent](https://github.com/paulovillalobos/incident-agent)**
-Ten injected faults in a small OpenTelemetry-instrumented system, an agent that
-investigates them through read-only tools, and a harness that scores every
-report against ground truth with code: citations must exist, fixes must survive
-a re-run of the incident. A local 4B model finds the right service in 60% of
-runs but never the full cause; my rule-based baseline gets 70%.
-`Python` `OpenTelemetry` `React` `TypeScript`
-
-### Libraries
-
-**[mesh-governance](https://github.com/paulovillalobos/mesh-governance)**
-Evidence store with append-only history enforced by database triggers,
-idempotent commands and review bound to exact revisions. 42 tests, standard
-library only, `mypy --strict`.
+- **[saneamento-engine](https://github.com/paulovillalobos/saneamento-engine)**: the Portaria on building applications as 642 hashed passages and 88 rules; 66 of 66 planted errors found, zero false alarms.
+- **[macro-vintages](https://github.com/paulovillalobos/macro-vintages)**: euro-area macro data in PostgreSQL with full revision history; 120 tests, 0 inconsistent reads in 9,406 under load.
+- **[audio-jobs](https://github.com/paulovillalobos/audio-jobs)**: background jobs in Go on Postgres and Redis Streams; 1,000 of 1,000 jobs survive killed workers and a Redis wipe.
+- **[platform-infra](https://github.com/paulovillalobos/platform-infra)**: Kubernetes, SLO alerts and six failure drills with 0 jobs lost; Terraform applied to real GCP and destroyed.
+- **[pt-open-data-pipeline](https://github.com/paulovillalobos/pt-open-data-pipeline)**: INE card-spending data with 82 dbt tests that caught a published inconsistency.
+- **[cordis-field-classifier](https://github.com/paulovillalobos/cordis-field-classifier)**: 52,000 EU research projects into 37 fields, robust on a funding programme it never saw.
+- **[mesh-governance](https://github.com/paulovillalobos/mesh-governance)**: evidence store with append-only history enforced by the database; `mypy --strict`.
 
 ### Security
 
@@ -110,7 +54,4 @@ vendor confirmed the same day that it was fixed for every affected client.
 
 ---
 
-Also: [foaap-engine-public](https://github.com/paulovillalobos/foaap-engine-public) ·
-[energy-baseline-public](https://github.com/paulovillalobos/energy-baseline-public) ·
-[bicis-sapiens-web](https://github.com/paulovillalobos/bicis-sapiens-web) ·
-live: [NEXUS](https://nexus.foaap.app/#/), [FOAAP](https://tecnologia.foaap.app/)
+Live: [foaap.app](https://foaap.app) · [demo.foaap.app](https://demo.foaap.app) · [contratos.foaap.app](https://contratos.foaap.app) · [NEXUS](https://nexus.foaap.app/#/)
